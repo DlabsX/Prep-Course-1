@@ -18,7 +18,7 @@ const {
 } = require('../homework');
 
 
-describe('obtenerMayor(x, y)', function() {
+describe.only('obtenerMayor(x, y)', function() {
   it('should return x if it is larger than y', function() {
     expect(obtenerMayor(10, 5)).toBe(10);
   });
@@ -30,7 +30,7 @@ describe('obtenerMayor(x, y)', function() {
   });
 });
 
-describe('mayoriaDeEdad(edad)', function() {
+describe.only('mayoriaDeEdad(edad)', function() {
   it('should return \'Allowed\'if edad is equal or greater than 18', function() {
     expect(mayoriaDeEdad(18)).toBe('Allowed');
     expect(mayoriaDeEdad(35)).toBe('Allowed');
@@ -40,7 +40,7 @@ describe('mayoriaDeEdad(edad)', function() {
   });
 });
 
-describe('conection(status)', function() {
+describe.only('conection(status)', function() {
   it('should return the conection state of user', function() {
     expect(conection(1)).toBe('Online');
     expect(conection(2)).toBe('Away');
@@ -49,7 +49,7 @@ describe('conection(status)', function() {
   });
 });
 
-describe('saludo(idioma)', function() {
+describe.only('saludo(idioma)', function() {
   it('should return \'Guten Tag!\' for aleman', function() {
     expect(saludo('aleman')).toBe('Guten Tag!');
   });
@@ -65,7 +65,7 @@ describe('saludo(idioma)', function() {
   });
 });
 
-describe('colors(color)', function() {
+describe.only('colors(color)', function() {
   it('should return \'This is {color}\'', function() {
     expect(colors("blue")).toBe('This is blue');
     expect(colors("red")).toBe('This is red');
@@ -185,7 +185,7 @@ describe ('tablaDelSeis()', function() {
   });
 });
 
-describe ('tieneTresDigitos(numero)', function() {
+describe('tieneTresDigitos(numero)', function() {
   it('should return true if numero has 3 digits', function() {
     expect(tieneTresDigitos(100)).toBe(true);
     expect(tieneTresDigitos(820)).toBe(true);
