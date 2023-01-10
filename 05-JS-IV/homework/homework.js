@@ -190,19 +190,14 @@ function sumarLikesDeUsuario (usuario) {
 // var usuario = {
 //   posts: [ {likes:10}, {likes:20}, {likes:30}]
 // }
-
-
-
 var sumar = 0; 
 
 for(var i = 0; i < usuario.posts.length; i++){
 
   sumar = sumar + usuario.posts[i].likes;
-
 }
  
 return sumar; 
-
 
 }
 
@@ -221,9 +216,8 @@ function agregarMetodoCalculoDescuento (producto) {
 
   // }
 
-           producto.calcularPrecioDescuento= () => {
-           var descuento = producto[precio]*producto.porcentajeDeDescuento;
-           var precioConDescuento = producto.precio - descuento;
+           producto.calcularPrecioDescuento = () => {
+           var precioConDescuento = producto.precio - producto[precio]*producto.porcentajeDeDescuento;
            return precioConDescuento;
            }
 
